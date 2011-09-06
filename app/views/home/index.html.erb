@@ -36,22 +36,35 @@ a:active {
       </object>
     </div>
     <div class="logo"><img src="/images/page1_03.jpg" /></div>
-    <div class="headerbutns"><a href="#"><img src="/images/1 (6).png" border="0" /></a></div>
-	  <div class="headerbutns"><a href="#"><img src="/images/1 (5).png" width="75" height="45" border="0" /></a></div>
-
+    
+	  <div class="headerbutns"><!--a href="#"-->
+                <% if current_gmuser %>       
+                  <%= link_to "Edit Profile", edit_gmuser_path(current_gmuser.id)%>
+             <%#= link_to "Gm", '/gmuser', :class=>"a-link"%> 
+          <%= link_to image_tag("/images/signout.png", :border => 0 ), {:action => "destroy", :controller => "gmuser_sessions"} %>
+            
+        <% else %>
+          <%= link_to image_tag("/images/signin.png", :border => 0), {:action => "new", :controller => "gmuser_sessions"} %>
+       <%= link_to image_tag("/images/search.png", :border=> 0), {:action => "search", :controller => "products"} %>
+            <!--%#= link_to "Register", new_user_path%-->
+        </div>
+        
+  <% end %>
   
   <div class="middlecont">
+    <%= yield %>
     <div class="leftbar">
 	  <div class="leftbarbutns"><a href="#"><img src="/images/1 (8).png" border="0" /></a></div>
 	  	  <div class="leftbarbutns"><a href="#"><img src="/images/1 (1).png" width="140" height="40" border="0" /></a></div>
 		  	  <div class="leftbarbutns"><a href="#"><img src="/images/1 (2).png" width="140" height="40" border="0" /></a></div>
 			  
-              <div class="leftbartextbox">*<a href="#">Payment Gateway..</a><br>
-*<a href="#">Credential@Brand</a><br>
-*<a href="#">Mall partnership...</a><br>
-*<a href="#">Point System...</a><br>
-*<a href="#">Reward System..</a><br>
-*<a href="#">Pic of the prize..</a></div>
+              <div class="leftbartextbox">*<a href="#">Payment Gateway..</a><br/>
+*<a href="#">Credential@Brand</a><br/>
+*<a href="#">Mall partnership...</a><br/>
+*<a href="#">Point System...</a><br/>
+*<a href="#">Reward System..</a><br/>
+*<a href="#">Pic of the prize..</a>
+              </div>
 			  
 			  
 			  

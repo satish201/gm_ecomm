@@ -6,15 +6,15 @@
     No Retailer is available in your database !!!
     <% else %>
       <tr height="30px" align="left">
-      <th style="padding-left: 15px">ID</th>
-      <th style="padding-left: 15px">Users</th>
+      <th>ID</th>
+      <th>Retailers</th>
         
      
     </tr>
 
     <% @retaileradmins.each do |retaileradmin| %>
       <tr>
-        <td style="padding-left: 15px" ><%= retaileradmin.id %></td>
+        <td><%= retaileradmin.id %></td>
         <td><%= retaileradmin.username %></td>
         <td><%= link_to "Edit", edit_retaileradmin_path(retaileradmin), :remote => true %>&nbsp;&nbsp;&nbsp; 
         <%= link_to "Destroy", retaileradmin, :remote => true, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,0 +1,30 @@
+<!--div style="color: black; background-color:white; height: 100%"-->
+  <br/>
+  <br/>
+  <h1>Listing users</h1>
+
+  <table>
+    <tr>
+      <th>Username</th>
+      <th>E-mail Address</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @gmusers.each do |gmuser| %>
+    <tr>
+      <td><%= gmuser.username %></td>
+      <td><%= gmuser.email %></td>
+      <td><%= link_to 'Show', gmuser %></td>
+      <td><%= link_to 'Edit', edit_gmuser_path(gmuser) %></td>
+      <td><%= link_to 'Back', gmusers_path %>
+      <td><%= link_to 'Destroy', gmuser, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%#= link_to 'New User', new_user_path %>
+
+<!--/div-->

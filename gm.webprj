@@ -11,9 +11,11 @@
     <item url="app/controllers/application_controller.rb" uploadstatus="1" />
     <item url="app/controllers/home_controller.rb" uploadstatus="1" />
     <item url="app/controllers/lifestyles_controller.rb" uploadstatus="1" />
+    <item url="app/controllers/mallmanagers_controller.rb" uploadstatus="1" />
     <item url="app/controllers/mapviews_controller.rb" uploadstatus="1" />
     <item url="app/controllers/products_controller.rb" uploadstatus="1" />
     <item url="app/controllers/retaileradmins_controller.rb" uploadstatus="1" />
+    <item url="app/controllers/retaileradmin_sessions_controller.rb" uploadstatus="1" />
     <item url="app/controllers/retailers_controller.rb" uploadstatus="1" />
     <item url="app/controllers/users_controller.rb" uploadstatus="1" />
     <item url="app/controllers/user_sessions_controller.rb" uploadstatus="1" />
@@ -22,8 +24,12 @@
     <item url="app/helpers/application_helper.rb" uploadstatus="1" />
     <item url="app/helpers/home_helper.rb" uploadstatus="1" />
     <item url="app/helpers/lifestyles_helper.rb" uploadstatus="1" />
+    <item url="app/helpers/mallmanager_admin_helper.rb" uploadstatus="1" />
+    <item url="app/helpers/mallmanageradmin_sessions_helper.rb" uploadstatus="1" />
+    <item url="app/helpers/mallmanagers_helper.rb" uploadstatus="1" />
     <item url="app/helpers/mapviews_helper.rb" uploadstatus="1" />
     <item url="app/helpers/products_helper.rb" uploadstatus="1" />
+    <item url="app/helpers/rataileradmin_sessions_helper.rb" uploadstatus="1" />
     <item url="app/helpers/retaileradmins_helper.rb" uploadstatus="1" />
     <item url="app/helpers/retailers_helper.rb" uploadstatus="1" />
     <item url="app/helpers/user_sessions_helper.rb" uploadstatus="1" />
@@ -37,9 +43,12 @@
     <item url="app/models/ckeditor/attachment_file.rb" uploadstatus="1" />
     <item url="app/models/ckeditor/picture.rb" uploadstatus="1" />
     <item url="app/models/lifestyle.rb" uploadstatus="1" />
+    <item url="app/models/mallmanager.rb" uploadstatus="1" />
     <item url="app/models/mapview.rb" uploadstatus="1" />
     <item url="app/models/product.rb" uploadstatus="1" />
     <item url="app/models/retaileradmin.rb" uploadstatus="1" />
+    <item url="app/models/retaileradmin_session.rb" uploadstatus="1" />
+    <item url="app/models/retailer.rb" uploadstatus="1" />
     <item url="app/models/user.rb" uploadstatus="1" />
     <item url="app/models/user_session.rb" uploadstatus="1" />
     <item url="app/views/" uploadstatus="1" />
@@ -50,6 +59,7 @@
     <item url="app/views/home/productslist.html.erb" uploadstatus="1" />
     <item url="app/views/layouts/" uploadstatus="1" />
     <item url="app/views/layouts/application.html.erb" uploadstatus="1" />
+    <item url="app/views/layouts/retailer.html.erb" uploadstatus="1" />
     <item url="app/views/layouts/user.html.erb" uploadstatus="1" />
     <item url="app/views/lifestyles/" uploadstatus="1" />
     <item url="app/views/lifestyles/_add_form.html.erb" uploadstatus="1" />
@@ -63,6 +73,14 @@
     <item url="app/views/lifestyles/_product_index.html.erb" uploadstatus="1" />
     <item url="app/views/lifestyles/product_index.js.erb" uploadstatus="1" />
     <item url="app/views/lifestyles/show.html.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/" uploadstatus="1" />
+    <item url="app/views/mallmanagers/_edit.html.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/edit.js.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/_form.html.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/index.js.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/_mallmanager_index.html.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/new.js.erb" uploadstatus="1" />
+    <item url="app/views/mallmanagers/show.html.erb" uploadstatus="1" />
     <item url="app/views/mapviews/" uploadstatus="1" />
     <item url="app/views/mapviews/edit.html.erb" uploadstatus="1" />
     <item url="app/views/mapviews/_form.html.erb" uploadstatus="1" />
@@ -82,8 +100,19 @@
     <item url="app/views/products/search.html.erb" uploadstatus="1" />
     <item url="app/views/products/show.html.erb" uploadstatus="1" />
     <item url="app/views/retaileradmins/" uploadstatus="1" />
+    <item url="app/views/retaileradmins/_edit.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmins/edit.js.erb" uploadstatus="1" />
     <item url="app/views/retaileradmins/_form.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmins/index.js.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmins/new.js.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmins/_retaileradmin_index.html.erb" uploadstatus="1" />
     <item url="app/views/retaileradmins/show.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/edit.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/_form.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/index.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/new.html.erb" uploadstatus="1" />
+    <item url="app/views/retaileradmin_sessions/show.html.erb" uploadstatus="1" />
     <item url="app/views/retailers/" uploadstatus="1" />
     <item url="app/views/retailers/index.html.erb" uploadstatus="1" />
     <item url="app/views/retailers/_new_request_form.html.erb" uploadstatus="1" />
@@ -101,6 +130,7 @@
     <item url="app/views/user_sessions/index.html.erb" uploadstatus="1" />
     <item url="app/views/user_sessions/new.html.erb" uploadstatus="1" />
     <item url="app/views/user_sessions/show.html.erb" uploadstatus="1" />
+    <item url="app/login javascript" uploadstatus="1" />
     <item url="config/" uploadstatus="1" />
     <item url="config/environments/" uploadstatus="1" />
     <item url="config/environments/development.rb" uploadstatus="1" />
@@ -109,6 +139,7 @@
     <item url="config/initializers/" uploadstatus="1" />
     <item url="config/initializers/backtrace_silencers.rb" uploadstatus="1" />
     <item url="config/initializers/ckeditor.rb" uploadstatus="1" />
+    <item url="config/initializers/client_side_validations.rb" uploadstatus="1" />
     <item url="config/initializers/inflections.rb" uploadstatus="1" />
     <item url="config/initializers/mail.rb" uploadstatus="1" />
     <item url="config/initializers/mime_types.rb" uploadstatus="1" />
@@ -135,15 +166,27 @@
     <item url="db/migrate/20110825085110_create_lifestyles.rb" uploadstatus="1" />
     <item url="db/migrate/20110825085729_add_column_to_lifestyle.rb" uploadstatus="1" />
     <item url="db/migrate/20110830114805_create_retaileradmins.rb" uploadstatus="1" />
+    <item url="db/migrate/20110831141822_create_retailers.rb" uploadstatus="1" />
+    <item url="db/migrate/20110831141845_create_retaileradmin_sessions.rb" uploadstatus="1" />
+    <item url="db/migrate/20110901132802_create_mallmanagers.rb" uploadstatus="1" />
     <item url="db/schema.rb" uploadstatus="1" />
     <item url="db/seeds.rb" uploadstatus="1" />
     <item url="doc/" uploadstatus="1" />
     <item url="doc/README_FOR_APP" uploadstatus="1" />
+    <item url="lib/" uploadstatus="1" />
+    <item url="lib/email_format_validator.rb" uploadstatus="1" />
     <item url="log/" uploadstatus="1" />
     <item url="log/development.log" uploadstatus="1" />
     <item url="log/production.log" uploadstatus="1" />
     <item url="log/server.log" uploadstatus="1" />
     <item url="log/test.log" uploadstatus="1" />
+    <item url="nbproject/" uploadstatus="1" />
+    <item url="nbproject/private/" uploadstatus="1" />
+    <item url="nbproject/private/private.properties" uploadstatus="1" />
+    <item url="nbproject/private/private.xml" uploadstatus="1" />
+    <item url="nbproject/private/rake-d.txt" uploadstatus="1" />
+    <item url="nbproject/project.properties" uploadstatus="1" />
+    <item url="nbproject/project.xml" uploadstatus="1" />
     <item url="public/" uploadstatus="1" />
     <item url="public/ckeditor_assets/" uploadstatus="1" />
     <item url="public/ckeditor_assets/pictures/" uploadstatus="1" />
@@ -1103,6 +1146,7 @@
     <item url="public/javascripts/jquery.js" uploadstatus="1" />
     <item url="public/javascripts/prototype.js" uploadstatus="1" />
     <item url="public/javascripts/rails.js" uploadstatus="1" />
+    <item url="public/javascripts/rails.validations.js" uploadstatus="1" />
     <item url="public/javascripts/ui.core-1.5.3.js" uploadstatus="1" />
     <item url="public/javascripts/ui.slider.js" uploadstatus="1" />
     <item url="public/stylesheets/" uploadstatus="1" />
@@ -1151,11 +1195,6 @@
     <item url="public/stylesheets/user.css" uploadstatus="1" />
     <item url="public/system/" uploadstatus="1" />
     <item url="public/system/images/" uploadstatus="1" />
-    <item url="public/system/images/2/" uploadstatus="1" />
-    <item url="public/system/images/2/original/" uploadstatus="1" />
-    <item url="public/system/images/2/original/robo.png" uploadstatus="1" />
-    <item url="public/system/images/2/thumb/" uploadstatus="1" />
-    <item url="public/system/images/2/thumb/robo.png" uploadstatus="1" />
     <item url="public/404.html" uploadstatus="1" />
     <item url="public/422.html" uploadstatus="1" />
     <item url="public/500.html" uploadstatus="1" />
@@ -1169,7 +1208,10 @@
     <item url="spec/controllers/home_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/lifestyels_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/lifestyles_controller_spec.rb" uploadstatus="1" />
+    <item url="spec/controllers/mallmanager_admin_controller_spec.rb" uploadstatus="1" />
+    <item url="spec/controllers/mallmanagers_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/mapviews_controller_spec.rb" uploadstatus="1" />
+    <item url="spec/controllers/ratailer_sessions_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/retailer_admin_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/retaileradmins_controller_spec.rb" uploadstatus="1" />
     <item url="spec/controllers/retailers_controller_spec.rb" uploadstatus="1" />
@@ -1184,7 +1226,11 @@
     <item url="spec/helpers/home_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/lifestyels_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/lifestyles_helper_spec.rb" uploadstatus="1" />
+    <item url="spec/helpers/mallmanager_admin_helper_spec.rb" uploadstatus="1" />
+    <item url="spec/helpers/mallmanager_sessions_helper_spec.rb" uploadstatus="1" />
+    <item url="spec/helpers/mallmanagers_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/mapviews_helper_spec.rb" uploadstatus="1" />
+    <item url="spec/helpers/ratailer_sessions_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/retailer_admin_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/retaileradmins_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/retailers_helper_spec.rb" uploadstatus="1" />
@@ -1192,22 +1238,31 @@
     <item url="spec/helpers/users_helper_spec.rb" uploadstatus="1" />
     <item url="spec/helpers/userssession_helper_spec.rb" uploadstatus="1" />
     <item url="spec/mailers/" uploadstatus="1" />
+    <item url="spec/mailers/mall_manager_notifier_spec.rb" uploadstatus="1" />
+    <item url="spec/mailers/mall_manager_spec.rb" uploadstatus="1" />
     <item url="spec/mailers/notifier_spec.rb" uploadstatus="1" />
     <item url="spec/models/" uploadstatus="1" />
     <item url="spec/models/lifestyel_spec.rb" uploadstatus="1" />
     <item url="spec/models/lifestyle_spec.rb" uploadstatus="1" />
+    <item url="spec/models/mallmanager_admin_spec.rb" uploadstatus="1" />
+    <item url="spec/models/mallmanager_session_spec.rb" uploadstatus="1" />
+    <item url="spec/models/mallmanager_spec.rb" uploadstatus="1" />
     <item url="spec/models/mapview_spec.rb" uploadstatus="1" />
     <item url="spec/models/retaileradmin_spec.rb" uploadstatus="1" />
+    <item url="spec/models/retailer_session_spec.rb" uploadstatus="1" />
+    <item url="spec/models/retailer_spec.rb" uploadstatus="1" />
     <item url="spec/models/user_session_spec.rb" uploadstatus="1" />
     <item url="spec/models/user_spec.rb" uploadstatus="1" />
     <item url="spec/requests/" uploadstatus="1" />
     <item url="spec/requests/lifestyels_spec.rb" uploadstatus="1" />
     <item url="spec/requests/lifestyles_spec.rb" uploadstatus="1" />
+    <item url="spec/requests/mallmanagers_spec.rb" uploadstatus="1" />
     <item url="spec/requests/mapviews_spec.rb" uploadstatus="1" />
     <item url="spec/requests/retaileradmins_spec.rb" uploadstatus="1" />
     <item url="spec/routing/" uploadstatus="1" />
     <item url="spec/routing/lifestyels_routing_spec.rb" uploadstatus="1" />
     <item url="spec/routing/lifestyles_routing_spec.rb" uploadstatus="1" />
+    <item url="spec/routing/mallmanagers_routing_spec.rb" uploadstatus="1" />
     <item url="spec/routing/mapviews_routing_spec.rb" uploadstatus="1" />
     <item url="spec/routing/retaileradmins_routing_spec.rb" uploadstatus="1" />
     <item url="spec/views/" uploadstatus="1" />
@@ -1225,6 +1280,14 @@
     <item url="spec/views/lifestyles/index.html.erb_spec.rb" uploadstatus="1" />
     <item url="spec/views/lifestyles/new.html.erb_spec.rb" uploadstatus="1" />
     <item url="spec/views/lifestyles/show.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanager_admin/" uploadstatus="1" />
+    <item url="spec/views/mallmanager_admin/index.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanager_admin/new_request.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanagers/" uploadstatus="1" />
+    <item url="spec/views/mallmanagers/edit.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanagers/index.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanagers/new.html.erb_spec.rb" uploadstatus="1" />
+    <item url="spec/views/mallmanagers/show.html.erb_spec.rb" uploadstatus="1" />
     <item url="spec/views/mapviews/" uploadstatus="1" />
     <item url="spec/views/mapviews/edit.html.erb_spec.rb" uploadstatus="1" />
     <item url="spec/views/mapviews/index.html.erb_spec.rb" uploadstatus="1" />
@@ -1251,6 +1314,9 @@
     <item url="test/unit/helpers/products_helper_test.rb" uploadstatus="1" />
     <item url="test/unit/product_test.rb" uploadstatus="1" />
     <item url="test/test_helper.rb" uploadstatus="1" />
+    <item url="tmp/" uploadstatus="1" />
+    <item url="tmp/pids/" uploadstatus="1" />
+    <item url="tmp/pids/server.pid" uploadstatus="1" />
     <item url="vendor/" uploadstatus="1" />
     <item url="vendor/plugins/" uploadstatus="1" />
     <item url="vendor/plugins/respond_to_parent/" uploadstatus="1" />
@@ -1270,11 +1336,12 @@
     <item url="Gemfile.lock" uploadstatus="1" />
     <item url="gm_ecomm.session" uploadstatus="1" />
     <item url="gm_ecomm.webprj" uploadstatus="1" />
+    <item url="gm.session" uploadstatus="1" />
+    <item url="gm.webprj" uploadstatus="1" />
     <item url="Rakefile" uploadstatus="1" />
     <item url="README" uploadstatus="1" />
     <item url="" uploadstatus="1" />
     <templates>templates/</templates>
     <toolbars>toolbars/</toolbars>
-    <annotations/>
   </project>
 </webproject>

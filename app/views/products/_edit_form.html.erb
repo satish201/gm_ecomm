@@ -2,19 +2,35 @@
 
 <%= form_for(@product, :validate => true, :url => product_path + ".js", :html => {:multipart => true, :target => 'frame'} ) do |f|%>
 <div>
-   <%= f.label "name", "Name*" %><br/>
+   <%= f.label "name", "Name *" %><br/>
    <%= f.text_field :name %>
 </div><br/>
 
+<div>Choose a Retailer * &nbsp;
+     <%= hidden_field_tag :id, "1" %>
+     <%= select_tag "retaileradmin_id", options_from_collection_for_select(@retaileradmins, "id", "username")  %><br/>
+   </div><br/>
+   
+   
  <div>
-   <%= f.label "price", "Price*" %></br>
+   <%= f.label "price", "Price *" %></br>
    <%= f.text_field :price %>
    </div><br/>
-
-<div class="field">
-    <%= f.label "description", "Description*" %><br />
+   
+ <div>
+     <%= f.label "image", "image *" %><br/>
+     <%= f.file_field :image %>
+ </div><br/>
+ 
+ <div class="field">
+    <%= f.label "description", "Description *" %><br />
     <%= f.cktext_area ("description"), :height=>'300px' %>
 </div>
+ 
+ <div>
+   <%= f.label "discount", "Discount *" %></br>
+   <%= f.text_field :discount %>&nbsp;%
+   </div><br/>
 
  
 

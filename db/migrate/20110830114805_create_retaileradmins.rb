@@ -1,6 +1,6 @@
 class CreateRetaileradmins < ActiveRecord::Migration
   def self.up
-    create_table :retaileradmins, { :options => "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" } do |t|
+    create_table :retaileradmins do |t|
       t.string :username
       t.string :email
       t.string :crypted_password

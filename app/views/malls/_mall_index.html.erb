@@ -1,0 +1,84 @@
+<div style="height: 894px; overflow: scroll;">
+<div class="right-cont-box">
+  <table style="border: 1px solid #cacaca;" width="100%" align="left" cellpadding="0" cellspacing="0">
+  <tbody>
+    <% if @malls.blank? -%>
+    No Mall is available in your database !!!
+    <% else %>
+      <tr height="30px" align="left">
+      <th>Mallname</th>
+    <th>City</th>
+    <th>Country</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+     <%end%> 
+      </tr>
+
+    <% @products.each do |product| %>
+      <tr>
+        <td  ><%= product.id %></td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to "Edit", edit_product_path(product), :remote => true %>&nbsp;&nbsp;&nbsp; 
+        <%= link_to "Destroy", product, :remote => true, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  
+     </tbody>
+  </table>
+ </div>
+
+<iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Listing malls</h1>
+
+<table>
+  <tr>
+    
+  </tr>
+
+<% @malls.each do |mall| %>
+  <tr>
+    <td><%= mall.mallname %></td>
+    <td><%= mall.city %></td>
+    <td><%= mall.country %></td>
+    <td><%= mall.address %></td>
+    <td><%= mall.description %></td>
+    <td><%= link_to 'Show', mall %></td>
+    <td><%= link_to 'Edit', edit_mall_path(mall) %></td>
+    <td><%= link_to 'Destroy', mall, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mall', new_mall_path %>

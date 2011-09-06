@@ -437,6 +437,15 @@ h1, h2, h3, h4, h5{
     top:10px;
 }
 
+.malladmintop-links{
+    height: 10px;
+    text-align: right;
+    position: relative;
+    right: 20px;
+    top:10px;
+    
+}
+
 .top-links a{
     text-decoration: none;
     color:#333;
@@ -571,6 +580,13 @@ h1, h2, h3, h4, h5{
     color:#fff;
     text-decoration: none;
     margin-left: 10px;
+}
+
+.malladmin-links .a-link{
+    color:#fff;
+    text-decoration: none;
+    margin-left: 10px;
+    
 }
 .video-show{
     margin-left: 100px;

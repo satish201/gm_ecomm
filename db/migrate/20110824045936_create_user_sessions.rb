@@ -1,6 +1,6 @@
 class CreateUserSessions < ActiveRecord::Migration
   def self.up
-    create_table :user_sessions, { :options => "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" } do |t|
+    create_table :user_sessions do |t|
 
       t.timestamps
     end

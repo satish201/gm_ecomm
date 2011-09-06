@@ -1,0 +1,41 @@
+
+<% form_tag "/request_gm", :validate => true, :method => :get do |f|% ->
+  <table>
+	<tr>
+       		<h2>Your Info</h2>
+		<p>Your Mall name:<br></p>
+		<p><%= text_field_tag :mallname %></p>
+		
+                <p>Your email address:<br></p>
+		<p><%= text_field_tag :email %></p>
+		
+                <p>City:<br></p>
+		<p><%= text_field_tag :city %></p>
+		
+		<p>State:<br></p>
+		<p><%= text_field_tag :state %></p>
+		
+		<p>Street address:<br></p>
+		<p><%= text_field_tag :streetaddress %></p>
+		
+		<p>ZIP code:<br></p>
+		<p><%= text_field_tag :zipcode %></p>
+				     		
+		<p>Your phone number:<br></p>
+		<p><%= text_field_tag :phonenumber %></p>
+        
+                <p>Upload a photo of your business :<br></p>
+		<p>inside: &nbsp;&nbsp;<%= file_field_tag :inside %></p>
+		<p>outside: <%= file_field_tag :outside %></p>
+			
+	      	<p>News:</p></br>
+      	        <p><%= text_field_tag :news %></br></p>
+            
+                <p>Message:</p></br>
+      	        <p><%= text_area_tag :message %></br></p>
+                </tr>	
+</table>
+     <div class="actions">
+     <%= submit_tag "Send E-mail" %>
+     </div>
+ <% end %>

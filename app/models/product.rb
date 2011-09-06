@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
   validates :description, :presence => true, :length => {:maximum => 160}
   validates :image, :presence => true
   validates :price, :numericality => {:greater_than_or_equal_to => 0.01}
-  
+  validates :discount, :numericality => {:greater_than_or_equal_to => 0.0}
   #validates :image, :format => { :with => %r{\.(gif|jpg|png)$}}
 
 end

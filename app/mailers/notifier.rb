@@ -39,5 +39,30 @@ class Notifier < ActionMailer::Base
     end
   end
   
+  def mallmanageremail_to_gm(city, state, streetaddress, zipcode, mallname,email,phonenumber,inside,outside,website, news, message, image, sent_at = Time.now)
+    @greeting = "Hi"
+    
+    @city = city
+    @state = state
+    @streetaddress = streetaddress
+    @zipcode = zipcode
+    @mallname = mallname
+    @email = email
+    @phonenumber = phonenumber
+    @inside = inside
+    @outside = outside
+    @website = website
+    @news = news
+    @message = message
+    attachments['image'] = image
+     
+    
+    mail(:to => "zsatish201@gmail.com,amit@auxir.com", :subject => "Testing mail", :date => Time.now) do |format|
+       format.html
+       format.xml{}
+    
+  end
+    
+  end
   
 end

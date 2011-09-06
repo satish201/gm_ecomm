@@ -1,0 +1,2 @@
+module MallmanageradminHelper
+end

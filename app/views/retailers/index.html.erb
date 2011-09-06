@@ -83,7 +83,7 @@
   	     <% if current_retaileradmin %>
   	        <%# current_retaileradmin.username == "admin" %>
             
-            <%= link_to "Edit Profile", edit_retaileradmin_path(current_retaileradmin.id)%>
+            <%= link_to "Edit Profile", edit_retailer_path(current_retaileradmin.id), :remote => true %>
             <%= link_to "Retailer", '/retailers', :class=>"a-link"%>     
             <%= link_to "Signout", :signout %> 
             

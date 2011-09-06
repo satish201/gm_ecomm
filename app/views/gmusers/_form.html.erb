@@ -1,0 +1,41 @@
+<%= form_for(@gmuser) do |f| %>
+  <% if @gmuser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gmuser.errors.count, "error") %> prohibited this gmuser from being saved:</h2>
+
+      <ul>
+      <% @gmuser.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %><br/>
+    <%= f.text_field :username %>
+  </div><br/>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div><br/> 
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div><br/>
+  <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div><br/>
+  <!--div class="field">
+  	<%# ["Retailer", "Mall Manager"].each do |c| %>
+  	<%#= f.radio_button :roll, c %><%#= c %>
+  	<%# end %>  
+  	</div-->
+  <div class="actions">
+    <%= f.submit %>
+   
+  </div>
+<% end %>
+  <iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+

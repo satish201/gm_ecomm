@@ -5,7 +5,32 @@ class RetailersController < ApplicationController
  
  
   def index
-      
+          
+  end
+  
+   def edit
+    @retaileradmin = Retaileradmin.find(params[:id])
+    #@retaileradmins = Retaileradmin.all
+    respond_to do |format|
+      format.js
+    end
+  end
+  
+    def update
+    @retaileradmin = Retaileradmin.find(params[:id])
+      if @retaileradmin.update_attributes(params[:retaileradmin])
+        flash[:notice] = 'Retaileradmin was successfully updated.'
+        @retaileradmins = Retaileradmin.all
+        responds_to_parent do |format|
+          flash[:notice] = 'Retaileradmin was successfully updated.'
+          render :action => 'new_request_form'
+        end
+      else
+        responds_to_parent do 
+           flash[:notice] = "There was an error while updating the Retailer information."
+           render :action => 'edit'
+      end
+    end
   end
   
   

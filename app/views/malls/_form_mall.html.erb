@@ -1,0 +1,42 @@
+<div style="height: 894px; overflow: scroll;">
+  
+<%= form_for(@mall, :url => malls_path + ".js", :html => {:multipart => true, :target => 'frame'}) do |f| %>
+  <% if @mall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mall.errors.count, "error") %> prohibited this mall from being saved:</h2>
+
+      <ul>
+      <% @mall.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "mallname", "Mall name *" %><br />
+    <%= f.text_field :mallname %>
+  </div>
+  <div class="field">
+    <%= f.label "city", "City *" %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label "country", "Country *" %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label "address", "Address *" %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label "description", "Description *" %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+  <iframe id='frame' name="frame" style="width:1px;height:1px; border:0px" src="about:blank"></iframe>
+	 </div>
+<p>* = All fields are mandatory</p>

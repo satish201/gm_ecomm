@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   # GET /products/new.xml
   def new
     @product = Product.new
+    @retaileradmins = Retaileradmin.all
     p "im a new product********"
     respond_to do |format|
       format.js
@@ -33,6 +34,7 @@ class ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @products = Product.all
+    @retaileradmins = Retaileradmin.all
    
     p "i m in edit **********"
    # p @product
@@ -46,7 +48,7 @@ class ProductsController < ApplicationController
   # POST /products.xml
   def create
     @product = Product.new(params[:product])
-    
+    @product.retailer_id = params[:product][:retaileradmin_id]
       if @product.save
         flash[:notice] = "Product was successfully created."
         @products = Product.all
@@ -74,6 +76,7 @@ p "*******************************************"
   # PUT /products/1.xml
   def update
     @product = Product.find(params[:id])
+    @product.retailer_id = params[:retaileradmin_id]
          if @product.update_attributes(params[:product])
        flash[:notice] = "Product was successfully updated."
         @products = Product.all

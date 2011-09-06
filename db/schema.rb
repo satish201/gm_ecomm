@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110901141014) do
+ActiveRecord::Schema.define(:version => 20110905112556) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                                 :null => false
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(:version => 20110901141014) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_assetable_type"
   add_index "ckeditor_assets", ["user_id"], :name => "fk_user"
 
+  create_table "gmuser_sessions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gmusers", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "device_token"
+  end
+
   create_table "lifestyles", :force => true do |t|
     t.text     "description"
     t.datetime "created_at"
@@ -37,7 +53,41 @@ ActiveRecord::Schema.define(:version => 20110901141014) do
     t.integer  "product_id"
   end
 
-  create_table "mallmanager_sessions", :force => true do |t|
+  create_table "malladmin_sessions", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "malladmins", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "malladms", :force => true do |t|
+    t.string   "username",                           :null => false
+    t.string   "email",                              :null => false
+    t.string   "persistence_token",                  :null => false
+    t.string   "crypted_password",                   :null => false
+    t.string   "password_salt",                      :null => false
+    t.string   "single_access_token",                :null => false
+    t.string   "perishable_token",                   :null => false
+    t.integer  "login_count",         :default => 0, :null => false
+    t.integer  "failed_login_count",  :default => 0, :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mallmanageradmin_sessions", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -67,6 +117,8 @@ ActiveRecord::Schema.define(:version => 20110901141014) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "discount"
+    t.integer  "retailer_id"
   end
 
   create_table "retaileradmin_sessions", :force => true do |t|

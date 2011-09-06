@@ -1,2 +1,0 @@
-class MallmanagerSessionsController < ApplicationController
-end

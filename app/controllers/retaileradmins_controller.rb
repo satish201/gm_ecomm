@@ -30,7 +30,7 @@ class RetaileradminsController < ApplicationController
   # GET /retaileradmins/1/edit
   def edit
     @retaileradmin = Retaileradmin.find(params[:id])
-    @retaileradmins = Retaileradmin.all
+    #@retaileradmins = Retaileradmin.all
     respond_to do |format|
       format.js
     end
@@ -61,6 +61,7 @@ class RetaileradminsController < ApplicationController
     @retaileradmin = Retaileradmin.find(params[:id])
       if @retaileradmin.update_attributes(params[:retaileradmin])
         flash[:notice] = 'Retaileradmin was successfully updated.'
+        
         @retaileradmins = Retaileradmin.all
         responds_to_parent do |format|
           render :action => 'index'

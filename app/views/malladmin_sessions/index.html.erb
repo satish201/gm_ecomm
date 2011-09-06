@@ -1,0 +1,26 @@
+<h1>Listing malladmin_sessions</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @malladmin_sessions.each do |malladmin_session| %>
+  <tr>
+    <td><%= malladmin_session.username %></td>
+    <td><%= malladmin_session.password %></td>
+    <td><%= malladmin_session.roll %></td>
+    <td><%= link_to 'Show', malladmin_session %></td>
+    <td><%= link_to 'Edit', edit_malladmin_session_path(malladmin_session) %></td>
+    <td><%= link_to 'Destroy', malldmin_session, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User session', new_malladmin_session_path %>

@@ -1,13 +1,18 @@
 GmEcomm::Application.routes.draw do
 
   
-
+  
  
- 
 
-  get "mallmanager_admin/index"
+  get "gmuser_sessions/new"
 
-  get "mallmanager_admin/new_request"
+  
+  
+  #get :show, :id => @gmuser.id
+
+ #get "mallmanager_admin/index"
+
+  #get "mallmanager_admin/new_request"
 
  #get "retailers/index"
 
@@ -16,37 +21,47 @@ GmEcomm::Application.routes.draw do
   #resources :mapviews
 
   #get "home/index"
-  
+  resources :api
+  match '/api/create_user' => 'api#create_user'
   
 resources :users, :user_sessions
- match "logout" => "user_sessions#destroy", :as => :logout  
-  match "login" => "user_sessions#new", :as => :login
+ match 'logout' => 'user_sessions#destroy', :as => :logout  
+  match 'login' => 'user_sessions#new', :as => :login
   
 resources :retailers, :retaileradmin_sessions
-  match "signin" => "retaileradmin_sessions#new", :as => :signin
-  match "signout" => "retaileradmin_sessions#destroy", :as => :signout
- 
-  #get "signup" => "users#new", :as => :signup
+  match 'signin' => 'retaileradmin_sessions#new', :as => :signin
+  match 'signout' => 'retaileradmin_sessions#destroy', :as => :signout
+  #retailer send request
+  match '/new_request_form' => 'retailers#new_request_form'
+  match '/notify_gm' => 'retailers#notify_gm'
   
-
-
+resources :malladms, :malladmin_sessions
+  match 'mallmanagersignin' => 'malladmin_sessions#new', :as => :mallmanagersignin
+  match 'mallmanagersignout' => 'malladmin_sessions#destroy', :as => :mallmanagersignout
+ #mallmanager send request
+  match '/new_request_gm' => 'malladms#new_request_gm'
+  match '/request_gm' => 'malladms#request_gm'
+  
+resources :gmusers, :gmuser_sessions
+  match '/gmusersignin' => 'gmuser_sessions#new', :as => :gmusersignin
+  match '/gmusersignout' => 'gmuser_sessions#destroy', :as => :gmusersignout
+  match '/gmusersignup' => 'gmusers#new', :as => :gmusersignup  
+  
 resources :admin
 resources :products
+resources :malls
 resources :lifestyles
-resources :retailers  
+resources :retailers        
 resources :retaileradmins 
- resources :mallmanagers
-
- # match '/retailer' => 'retailers#new_request_form'
-     
-      match '/new_request_form' => 'retailers#new_request_form'
-      match '/notify_gm' => 'retailers#notify_gm'
+resources :malladms
+resources :malladmins
+      
       #match '/index' => 'retaileradmins#index'
       match '/productslist' => 'home#productslist'
       match '/lifestyleslist' => 'lifestyles#lifestyleslist'
       match '/products_index' => 'lifestyles#product_index'
       match '/check_product' => 'lifestyles#check_product'
-      match '/products/:id/search' => 'products#search', :as => :search
+      match '/search' => 'products#search', :as => :search
    
   root :to => "home#index"
 

@@ -1,0 +1,26 @@
+<h1>Listing user_sessions</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gmuser_sessions.each do |gmuser_session| %>
+  <tr>
+    <td><%= gmuser_session.username %></td>
+    <td><%= gmuser_session.password %></td>
+    <td><%= gmuser_session.roll %></td>
+    <td><%= link_to 'Show', gmuser_session %></td>
+    <td><%= link_to 'Edit', edit_gmuser_session_path(gmuser_session) %></td>
+    <td><%= link_to 'Destroy', gmuser_session, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gmuser session', new_gmuser_session_path %>
